@@ -1,0 +1,47 @@
+{
+  "name": "@pinkpixel/llmstxt-mcp",
+  "version": "1.0.3",
+  "description": "A model context protocol server to fetch llmstxt documentation",
+  "author": "Pink Pixel",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "llmstxt-mcp": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "build/index.js",
+  "scripts": {
+    "lint": "npx eslint \"src/**/*.{ts,js}\"",
+    "build": "tsc --noEmit && cross-env NODE_ENV=production node scripts/build.js",
+    "dev": "npm run dev:stdio",
+    "dev:stdio": "cross-env NODE_ENV=local concurrently \"tsc --noEmit --watch\" \"node scripts/dev.js\"",
+    "inspector": "npx @modelcontextprotocol/inspector ./build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "turndown": "^7.2.0",
+    "yaml": "^2.6.1",
+    "yargs": "^17.7.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.16.2",
+    "@types/turndown": "^5.0.5",
+    "@types/yargs": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "concurrently": "^9.2.0",
+    "cross-env": "^10.0.0",
+    "esbuild": "^0.25.8",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "tree-kill": "^1.2.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}

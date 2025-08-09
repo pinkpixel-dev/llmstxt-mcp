@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "llmstxt": {
+      "command": "npx",
+      "args": [
+		"y",
+        "@pinkpixel/llmstxt-mcp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# Coders in Flow
+.codersinflow
+.vscode
+node_modules
+.env
+.DS_Store
