@@ -61,9 +61,10 @@ export LLMSTXT_ALLOWED_DOMAINS="react.dev,nextjs.org,nodejs.org"
 
 ## MCP Client Configuration
 
-### Claude Desktop
+You can install globally with npm i -g @pinkpixel/llmstxt-mcp and then it can be ran with "llmstxt-mcp"
 
-Add to your `claude_desktop_config.json`:
+Add to your `mcp_config.json`:
+
 
 ```json
 {
@@ -79,13 +80,28 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
-### Other MCP Clients
+OR use with npx
 
-Run the server directly:
 
-```bash
-llmstxt-mcp
+```json
+{
+  "mcpServers": {
+    "llmstxt": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@pinkpixel/llmstxt-mcp",
+        "llmstxt-mcp"
+        ],
+      "env": {
+        "LLMSTXT_FOLLOW_REDIRECTS": "true",
+        "LLMSTXT_TIMEOUT": "30"
+      }
+    }
+  }
+}
 ```
+
 
 ## Testing
 

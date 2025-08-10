@@ -90,7 +90,7 @@ const allowedLocalFiles = new Set(
 const server = new Server(
   {
     name: "llmstxt-mcp",
-    version: "1.0.3",
+    version: "1.0.4",
   },
   {
     capabilities: {

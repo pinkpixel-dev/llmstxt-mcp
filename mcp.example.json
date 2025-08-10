@@ -4,7 +4,8 @@
       "command": "npx",
       "args": [
 		"y",
-        "@pinkpixel/llmstxt-mcp"
+        "@pinkpixel/llmstxt-mcp",
+		"llmstxt-mcp"
       ]
     }
   }

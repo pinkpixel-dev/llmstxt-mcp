@@ -1,6 +1,6 @@
 {
   "name": "@pinkpixel/llmstxt-mcp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A model context protocol server to fetch llmstxt documentation",
   "author": "Pink Pixel",
   "type": "module",
