@@ -1,4 +1,4 @@
-import type { DocSource } from './llmstxt';
+import type { DocSource } from "./llmstxt";
 
 export interface OptionsType {
   name: string;

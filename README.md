@@ -28,6 +28,7 @@ The server starts automatically and provides two tools:
 ### Default Configuration
 
 By default, the server is configured with:
+
 - **React documentation**: `https://react.dev/llms.txt`
 - **Next.js documentation**: `https://nextjs.org/llms.txt`
 - **Node.js documentation**: `https://nodejs.org/llms.txt`
@@ -53,6 +54,7 @@ Customize behavior with these environment variables:
 - `LLMSTXT_ALLOWED_DOMAINS`: Comma-separated list of allowed domains (default: `*` for all)
 
 Example:
+
 ```bash
 export LLMSTXT_FOLLOW_REDIRECTS=true
 export LLMSTXT_TIMEOUT=30
@@ -64,7 +66,6 @@ export LLMSTXT_ALLOWED_DOMAINS="react.dev,nextjs.org,nodejs.org"
 You can install globally with npm i -g @pinkpixel/llmstxt-mcp and then it can be ran with "llmstxt-mcp"
 
 Add to your `mcp_config.json`:
-
 
 ```json
 {
@@ -82,17 +83,12 @@ Add to your `mcp_config.json`:
 
 OR use with npx
 
-
 ```json
 {
   "mcpServers": {
     "llmstxt": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@pinkpixel/llmstxt-mcp",
-        "llmstxt-mcp"
-        ],
+      "args": ["-y", "@pinkpixel/llmstxt-mcp", "llmstxt-mcp"],
       "env": {
         "LLMSTXT_FOLLOW_REDIRECTS": "true",
         "LLMSTXT_TIMEOUT": "30"
@@ -101,7 +97,6 @@ OR use with npx
   }
 }
 ```
-
 
 ## Testing
 
@@ -157,8 +152,9 @@ npm run inspector
 ## Error Handling
 
 The server provides detailed error messages for:
+
 - Invalid or unreachable URLs
-- Domain restriction violations 
+- Domain restriction violations
 - Timeout errors
 - HTTP errors (404, 500, etc.)
 
@@ -167,4 +163,5 @@ The server provides detailed error messages for:
 MIT License - see LICENSE file for details.
 
 ---
+
 Made with ❤️ by [Pink Pixel](https://pinkpixel.dev)

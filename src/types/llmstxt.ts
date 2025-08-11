@@ -1,6 +1,6 @@
 /**
  * Types for LLMS-TXT Documentation Server
- * 
+ *
  * These interfaces correspond to the Python TypedDict definitions
  * from the original mcpdoc server.
  */
@@ -13,12 +13,12 @@ export interface DocSource {
    * Name of the documentation source (optional).
    */
   name?: string;
-  
+
   /**
    * URL to the llms.txt file or documentation source.
    */
   llms_txt: string;
-  
+
   /**
    * Description of the documentation source (optional).
    */
@@ -33,17 +33,17 @@ export interface ServerOptions {
    * List of documentation sources to make available
    */
   docSources: DocSource[];
-  
+
   /**
    * Whether to follow HTTP redirects when fetching docs
    */
   followRedirects?: boolean;
-  
+
   /**
    * HTTP request timeout in seconds
    */
   timeout?: number;
-  
+
   /**
    * Additional domains to allow fetching from.
    * Use ['*'] to allow all domains.
