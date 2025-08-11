@@ -1,15 +1,15 @@
-import type { ArgumentsCamelCase } from 'yargs'
-import type { OptionsType } from '@/types'
+import type { ArgumentsCamelCase } from "yargs";
+import type { OptionsType } from "@/types";
 
-export * from './llmstxt';
-export * from './http-client';
-export * from './config';
+export * from "./llmstxt";
+export * from "./http-client";
+export * from "./config";
 
 export function getOptions(
   argv: ArgumentsCamelCase,
   pkg: {
-    name: string
-    version: string
+    name: string;
+    version: string;
   },
 ) {
   return {
@@ -17,5 +17,5 @@ export function getOptions(
     version: pkg.version,
     port: argv.port,
     ...argv, // Include all CLI arguments
-  } as OptionsType
+  } as OptionsType;
 }
